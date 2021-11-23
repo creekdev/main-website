@@ -31,7 +31,6 @@ module.exports = {
       },
       __key: "pages",
     },
-    "gatsby-plugin-material-ui",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-top-layout",
     "gatsby-plugin-mui-emotion",
