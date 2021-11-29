@@ -1,15 +1,13 @@
 import React from "react";
-import {
-  Container,
-  Box,
-  Typography,
-  Stack,
-  List,
-  ListItem,
-  ListItemText,
-  Collapse,
-  Divider,
-} from "@mui/material";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Stack from "@mui/material/Stack";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+import Collapse from "@mui/material/Collapse";
+import Divider from "@mui/material/Divider";
 
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
@@ -86,11 +84,12 @@ const faq_list = [
 
 const Question = ({ question, answer }) => {
   const [open, setOpen] = React.useState(false);
+  const Icon = open ? ExpandLess : ExpandMore;
   return (
     <React.Fragment>
       <ListItem button onClick={() => setOpen(!open)}>
         <ListItemText primary={question} />
-        {open ? <ExpandLess /> : <ExpandMore />}
+        <Icon sx={{ color: "grey.400" }} />
       </ListItem>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <Box p={2} pb={4}>
@@ -110,11 +109,11 @@ const FAQ = () => {
         <title>Frequently Asked Questions (FAQs)</title>
       </Helmet>
       <Container>
-        <Box py={28}>
+        <Box sx={{ py: { xs: 16, md: 28 } }}>
           <Typography
             variant="h1"
             color="initial"
-            textAlign="center"
+            sx={{ textAlign: { xs: "left", md: "center" } }}
             gutterBottom
           >
             FAQs

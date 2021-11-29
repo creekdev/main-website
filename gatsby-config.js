@@ -31,6 +31,31 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "./src/images/splash.png",
+        name: `Creekside Logistics`,
+        short_name: `CS Web`,
+        description: `The best delivery service within Port Harcourt`,
+        start_url: `/`,
+        background_color: `#fff`,
+        theme_color: `#ff0600`,
+        display: `standalone`,
+        icons: [
+          {
+            src: `./src/images/splash.png`,
+            sizes: `192x192`,
+            type: `image/png`,
+          },
+          {
+            src: `./src/images/splash.png`,
+            sizes: `512x512`,
+            type: `image/png`,
+          },
+        ],
+      },
+    },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-top-layout",
     "gatsby-plugin-mui-emotion",

@@ -4,18 +4,17 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Container from "@mui/material/Container";
-import {
-  Slide,
-  Button,
-  Stack,
-  IconButton,
-  Drawer,
-  List,
-  ListItem,
-  ListItemText,
-  Box,
-  Avatar,
-} from "@mui/material";
+import Slide from "@mui/material/Slide";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
+import IconButton from "@mui/material/IconButton";
+import Drawer from "@mui/material/Drawer";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+import Box from "@mui/material/Box";
+import Avatar from "@mui/material/Avatar";
+import Divider from "@mui/material/Divider";
 import { Link } from "gatsby";
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -42,6 +41,15 @@ const MyDrawer = ({ open, onClose }) => (
           <ListItemText primary={name} />
         </ListItem>
       ))}
+      <Divider sx={{ mx: 1 }} />
+      <ListItem
+        onClick={onClose}
+        component="a"
+        href="https://app.creeksidelogistics.com"
+        button
+      >
+        <ListItemText primary="Use app" />
+      </ListItem>
     </List>
   </Drawer>
 );
@@ -69,20 +77,32 @@ export default function MyAppBar(props) {
         <Toolbar sx={{ bgcolor: "transparent" }}>
           <Container>
             <Stack direction="row" alignItems="center">
-              <Link style={{ lineHeight: 0 }} to="/">
-                <Avatar
-                  src="/splash.png"
-                  alt="logo"
-                  variant="square"
-                  sx={{ width: { xs: "60px", md: "36px" }, marginRight: 3 }}
-                />
-              </Link>
-              <Typography
-                variant="h6"
-                sx={{ display: { xs: "none", sm: "block" } }}
+              <Button
+                variant="text"
+                component={Link}
+                color="inherit"
+                to="/"
+                startIcon={
+                  <Avatar
+                    src="/splash.png"
+                    alt="logo"
+                    variant="square"
+                    sx={{ width: { xs: "60px", md: "36px" } }}
+                  />
+                }
               >
-                {menuItems.title}
-              </Typography>
+                <Typography
+                  variant="h6"
+                  color="inherit"
+                  sx={{
+                    display: { xs: "none", sm: "block" },
+                    textTransform: "initial",
+                  }}
+                >
+                  {menuItems.title}
+                </Typography>
+              </Button>
+
               <Box sx={{ flexGrow: 1 }} />
               <IconButton
                 size="large"
@@ -119,6 +139,17 @@ export default function MyAppBar(props) {
                     </Button>
                   );
                 })}
+                <Button
+                  component="a"
+                  component="a"
+                  href="https://app.creeksidelogistics.com"
+                  color="primary"
+                  variant="contained"
+                  size="small"
+                  disableElevation
+                >
+                  Use app
+                </Button>
               </Stack>
             </Stack>
           </Container>

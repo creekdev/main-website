@@ -1,16 +1,14 @@
 import React from "react";
-import {
-  Box,
-  Container,
-  Stack,
-  Avatar,
-  Typography,
-  List,
-  ListItem,
-  ListItemText,
-  Divider,
-  IconButton,
-} from "@mui/material";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Stack from "@mui/material/Stack";
+import Avatar from "@mui/material/Avatar";
+import Typography from "@mui/material/Typography";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+import Divider from "@mui/material/Divider";
+import IconButton from "@mui/material/IconButton";
 
 import menuItems from "../utils/getMenus";
 import { Link } from "gatsby";
@@ -128,7 +126,7 @@ const MyFooter = () => {
           </Box>
         </Stack>
       </Container>
-      <Divider sx={{ bgcolor: "#ffffff55" }} />
+      <Divider sx={{ bgcolor: "#ffffff55", mx: { xs: 0, md: 2 } }} />
       <Container>
         <Typography
           variant="body2"

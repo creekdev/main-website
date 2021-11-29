@@ -1,20 +1,17 @@
 import React from "react";
-import {
-  Toolbar,
-  Box,
-  Container,
-  Stack,
-  Typography,
-  Paper,
-  Grid,
-  Avatar,
-  List,
-  ListItemAvatar,
-  ListItemText,
-  ListItem,
-  Divider,
-  Chip,
-} from "@mui/material";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+import Paper from "@mui/material/Paper";
+import Grid from "@mui/material/Grid";
+import Avatar from "@mui/material/Avatar";
+import List from "@mui/material/List";
+import ListItemAvatar from "@mui/material/ListItemAvatar";
+import ListItemText from "@mui/material/ListItemText";
+import ListItem from "@mui/material/ListItem";
+import Divider from "@mui/material/Divider";
+import Chip from "@mui/material/Chip";
 
 import VisibilitySensor from "react-visibility-sensor";
 

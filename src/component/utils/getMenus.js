@@ -5,14 +5,14 @@ const menuItems = {
       name: "Meet us",
       link: "/meet-us",
     },
-    {
-      name: "Services",
-      link: "/meet-us#services",
-    },
-    {
-      name: "Contact",
-      link: "/meet-us#contact",
-    },
+    // {
+    //   name: "Services",
+    //   link: "/meet-us#services",
+    // },
+    // {
+    //   name: "Contact",
+    //   link: "/meet-us#contact",
+    // },
     // {
     //   name: "Blog",
     //   link: "/",

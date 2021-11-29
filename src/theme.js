@@ -1,5 +1,5 @@
-import { red } from "@mui/material/colors";
-import { createTheme } from "@mui/material/styles";
+import red from "@mui/material/colors/red";
+import createTheme from "@mui/material/styles/createTheme";
 
 // A custom theme for this app
 const theme = createTheme({
@@ -13,6 +13,9 @@ const theme = createTheme({
     error: {
       main: red.A400,
     },
+  },
+  typography: {
+    fontFamily: "Poppins",
   },
 });
 
